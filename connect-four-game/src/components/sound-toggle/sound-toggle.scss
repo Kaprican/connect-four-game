@@ -1,0 +1,29 @@
+.sound-toggle {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+
+    &-icon {
+        display: flex;
+    }
+}
+
+.sound-toggle:hover {
+    transform: scale(1.1);
+}
+
+.sound-toggle--on {
+    color: #4CAF50;
+    border-color: #4CAF50;
+}
+
+.sound-toggle--off {
+    color: #757575;
+    border-color: #757575;
+}

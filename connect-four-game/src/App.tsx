@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useGame } from './hooks/useGame';
 import { GameBoard } from './components/board/board.tsx';
 import { defaultConfig } from './config/config.ts';
-import './App.css';
+import './App.scss';
 import type { PlayerConfig } from './interfaces/player.interface.ts';
+import { SoundToggle } from './components/sound-toggle/sound-toggle.tsx';
+import type { GameConfig } from './interfaces/config.interface.ts';
 
 const App: React.FC = () => {
+    const [config, setConfig] = useState(defaultConfig);
+
     const {
         board,
         currentPlayer,
@@ -13,7 +17,14 @@ const App: React.FC = () => {
         winningPositions,
         makeMove,
         startGame
-    } = useGame(defaultConfig);
+    } = useGame(config);
+
+    const handleSoundToggle = (enabled: boolean) => {
+        setConfig((prev: GameConfig) => ({
+            ...prev,
+            sound: { enabled }
+        }));
+    };
 
     const getStatusMessage = () => {
         const currentPlayerConfig: PlayerConfig = defaultConfig.players[currentPlayer];
@@ -32,7 +43,15 @@ const App: React.FC = () => {
 
     return (
         <div className="app">
-            <h1>Connect Four</h1>
+            <div className="header">
+                <h1 className="game-title">Connect Four</h1>
+
+                <SoundToggle
+                    isEnabled={config.sound.enabled}
+                    onToggle={handleSoundToggle}
+                    className="header-sound-toggle"
+                />
+            </div>
 
             <div className="game-info">
                 <div className="status">{getStatusMessage()}</div>

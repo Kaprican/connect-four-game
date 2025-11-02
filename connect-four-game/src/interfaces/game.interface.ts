@@ -1,6 +1,8 @@
 import type { BoardState, Position } from './board.interface.ts';
 import type { Player } from './player.interface.ts';
 
+export type GameState = 'waiting' | 'playing' | 'win' | 'draw';
+
 export interface ValidationResult {
     [step: string]: GameStep;
 }
