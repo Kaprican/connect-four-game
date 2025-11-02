@@ -1,0 +1,22 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.game-title {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: bold;
+}

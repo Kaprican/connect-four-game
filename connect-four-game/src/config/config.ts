@@ -19,5 +19,8 @@ export const defaultConfig: GameConfig = {
     animations: {
         dropDuration: 400,
         winHighlightDuration: 1000
+    },
+    sound: {
+        enabled: true
     }
 };

@@ -1,4 +1,5 @@
 import type { Players } from './player.interface.ts';
+import type { SoundConfig } from './sound.interface.ts';
 
 export interface GameConfig {
     rows: number;
@@ -9,4 +10,5 @@ export interface GameConfig {
         dropDuration: number;
         winHighlightDuration: number;
     };
+    sound: SoundConfig;
 }
