@@ -1,5 +1,5 @@
-import { validateGame } from '../validator';
-import { testConfig } from './test-config';
+import { validateGame } from '../validator.ts';
+import { testConfig } from './test-config.ts';
 
 describe('Game Validator', () => {
     test('should validate empty game', () => {
