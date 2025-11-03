@@ -29,7 +29,7 @@ jobs:
         with:
           node-version: '24'
           cache: 'npm'
-          cache-dependency-path: '/home/runner/work/connect-four-game/connect-four-game/package-lock.json'
+          cache-dependency-path: '$(pwd)/package-lock.json'
 
       # Шаг 3: Установка зависимостей
       - name: Install dependencies
@@ -46,3 +46,11 @@ jobs:
       # Шаг 6: Сборка проекта
       - name: Build project
         run: npm run build
+
+      - name: Test report
+        if: always()
+        run: |
+          echo "=== Pipeline Summary ==="
+          echo "Lint: ${{ job.status == 'success' && '✅ PASSED' || '❌ FAILED' }}"
+          echo "Tests: ${{ job.status == 'success' && '✅ PASSED' || '❌ FAILED' }}"
+          echo "Build: ${{ job.status == 'success' && '✅ PASSED' || '❌ FAILED' }}"
