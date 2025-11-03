@@ -64,7 +64,6 @@ const App: React.FC = () => {
                 board={board}
                 onColumnClick={makeMove}
                 winningPositions={winningPositions}
-                config={defaultConfig}
             />
 
         </div>

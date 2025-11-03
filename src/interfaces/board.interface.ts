@@ -7,5 +7,5 @@ export interface GameBoardProps {
     board: (string | null)[][];
     onColumnClick: (column: number) => void;
     winningPositions?: Position[];
-    config: GameConfig;
+    config?: GameConfig;
 }
