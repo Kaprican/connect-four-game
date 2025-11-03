@@ -39,4 +39,4 @@ Connect four
     - [x] Добавить настройку звука (перенести в меню настроек)
 - [ ] *Поставить игру на демо стенд
 - [ ] *Добавить pre-commit hook
-- [ ] *github pipelines
+- [x] *github Actions (pipelines)
