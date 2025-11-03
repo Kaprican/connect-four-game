@@ -1,0 +1,41 @@
+name: CI Pipeline
+
+on: [ push ]
+
+jobs:
+  quality-checks:
+    name: Lint, Test and Build
+    runs-on: ubuntu-latest
+
+    steps:
+      # Шаг 1: Checkout кода
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Шаг 2: Setup Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      # Шаг 3: Установка зависимостей
+      - name: Install dependencies
+        run: npm ci
+
+      # Шаг 4: Запуск линтера
+      - name: Run lint
+        run: |
+          npm run lint
+          echo "✅ Lint passed"
+
+      # Шаг 5: Запуск тестов
+      - name: Run tests
+        run: |
+          npm run test
+          echo "✅ Tests passed"
+
+      # Шаг 6: Сборка проекта
+      - name: Build project
+        run: |
+          npm run build
+          echo "✅ Build successful"

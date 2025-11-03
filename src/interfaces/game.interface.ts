@@ -20,6 +20,6 @@ export interface GameStep {
 export interface GameSession {
     id: string;
     moves: number[];
-    config: any;
+    config?: string;
     result?: ValidationResult;
 }

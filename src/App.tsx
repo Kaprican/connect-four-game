@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useGame } from './hooks/useGame';
+import { useGame } from './hooks/useGame.ts';
 import { GameBoard } from './components/board/board.tsx';
 import { defaultConfig } from './config/config.ts';
 import './App.scss';
