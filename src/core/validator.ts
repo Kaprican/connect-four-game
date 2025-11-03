@@ -1,4 +1,4 @@
-import { ConnectFourGame } from './game-logic.ts';
+import { ConnectFourGame } from './game-logic';
 import type { GameConfig } from '../interfaces/config.interface.ts';
 import type { ValidationResult } from '../interfaces/game.interface.ts';
 import type { Player } from '../interfaces/player.interface.ts';
