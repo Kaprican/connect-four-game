@@ -6,7 +6,7 @@ Connect four
 Веб-версия классической игры "4 в ряд" (Connect Four).
 Игра реализована на фронтенде с использованием HTML, CSS, React и TS.
 
-Демо
+[Поиграть можто тут](https://connect-four-game-vercel.vercel.app/)
 
 !! Добавить giff
 
@@ -37,6 +37,6 @@ Connect four
   - [x] Добавить звуки на падение фишки
   - [x] Добавить музыку
     - [x] Добавить настройку звука (перенести в меню настроек)
-- [ ] *Поставить игру на демо стенд
+- [x] Поставить игру на демо стенд
 - [ ] *Добавить pre-commit hook
-- [x] *github Actions (pipelines)
+- [x] github Actions (pipelines)
