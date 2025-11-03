@@ -22,6 +22,7 @@ jobs:
         with:
           node-version: '24'
           cache: 'npm'
+          cache-dependency-path: '/home/runner/work/connect-four-game/connect-four-game/package-lock.json'
 
       # Шаг 3: Установка зависимостей
       - name: Install dependencies
