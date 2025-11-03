@@ -28,8 +28,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '24'
-          cache: 'npm'
-          cache-dependency-path: '$(pwd)/package-lock.json'
+          # cache: 'npm'
+          # cache-dependency-path: '$(pwd)/package-lock.json'
 
       # Шаг 3: Установка зависимостей
       - name: Install dependencies
