@@ -6,7 +6,7 @@ Connect four
 Веб-версия классической игры "4 в ряд" (Connect Four).
 Игра реализована на фронтенде с использованием HTML, CSS, React и TS.
 
-[Поиграть](https://connect-four-game-vercel.vercel.app/)
+[Поиграть](https://connect-four-game-k6z22wttp-anastasia-nikolskayas-projects.vercel.app/)
 
 ![Превью игры](public/preview.gif)
 
