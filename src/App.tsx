@@ -66,7 +66,7 @@ const App: React.FC = () => {
         return () => {
             window.removeEventListener('keydown', handleEsc);
         };
-    }, [gameState]);
+    }, [gameState, toggleSettingsModal]);
 
     return (
         <div className="app">
