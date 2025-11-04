@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Honk&display=swap');
+
+.honk-font {
+    font-size: 100px;
+   font-family: "Honk", system-ui;
+   font-optical-sizing: auto;
+   font-weight: 400;
+   font-style: normal;
+   font-variation-settings:
+           "MORF" 15,
+           "SHLN" 50;
+}
+
+.start-button {
+    cursor: pointer;
+
+    &:hover {
+        filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.5));
+        transition: all 0.2s ease-in-out;
+    }
+}
+
+.game-info {
+    .subtitle {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.rules_wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+
+    .rules {
+        &_header {
+            cursor: pointer;
+            opacity: .5;
+
+            &:hover {
+                opacity: 1;
+                text-decoration: dotted underline;
+                transition: all 0.2s ease-in-out;
+            }
+        }
+
+        &_body {
+            text-align: start;
+        }
+    }
+}
