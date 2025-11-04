@@ -9,7 +9,7 @@ import { soundCoreService } from '../core/sound-core.ts';
 export const useGame = (config: GameConfig) => {
     const [game] = useState(() => new ConnectFourGame(config));
     const [board, setBoard] = useState(game.getBoard());
-    const [currentPlayer, setCurrentPlayer] = useState<Player>('player1');
+    const [currentPlayer, setCurrentPlayer] = useState<Player>('player_1');
     const [gameState, setGameState] = useState<GameState>('waiting');
     const [winningPositions, setWinningPositions] = useState<Position[]>([]);
 
@@ -47,7 +47,7 @@ export const useGame = (config: GameConfig) => {
         }
 
         // Switch player
-        setCurrentPlayer(currentPlayer === 'player1' ? 'player2' : 'player1');
+        setCurrentPlayer(currentPlayer === 'player_1' ? 'player_2' : 'player_1');
     }, [game, currentPlayer, gameState]);
 
     useEffect(() => {
@@ -66,7 +66,7 @@ export const useGame = (config: GameConfig) => {
     const startGame = useCallback(() => {
         game.reset();
         setBoard(game.getBoard());
-        setCurrentPlayer('player1');
+        setCurrentPlayer('player_1');
         setGameState('pending');
         setWinningPositions([]);
     }, [game]);

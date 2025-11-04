@@ -1,4 +1,4 @@
-export type Player = 'player1' | 'player2';
+export type Player = 'player_1' | 'player_2';
 
 export interface PlayerConfig {
     name: string;

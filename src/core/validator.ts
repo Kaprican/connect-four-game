@@ -3,17 +3,18 @@ import type { GameConfig } from '../interfaces/config.interface.ts';
 import type { GameState, ValidationResult } from '../interfaces/game.interface.ts';
 import type { Player } from '../interfaces/player.interface.ts';
 
-export function validateGame(moves: number[], config: GameConfig): ValidationResult {
+
+export function validator(moves: number[], config: GameConfig): ValidationResult {
     const game = new ConnectFourGame(config);
     const result: ValidationResult = {
         step_0: {
-            player1: [],
-            player2: [],
+            player_1: [],
+            player_2: [],
             board_state: 'waiting'
         }
     };
 
-    let currentPlayer: Player = 'player1';
+    let currentPlayer: Player = 'player_1';
     let stepNumber = 1;
 
     for (const column of moves) {
@@ -31,16 +32,16 @@ export function validateGame(moves: number[], config: GameConfig): ValidationRes
         }
 
         // Get current positions
-        const player1Positions: [number, number][] = [];
-        const player2Positions: [number, number][] = [];
+        const player_1Positions: [number, number][] = [];
+        const player_2Positions: [number, number][] = [];
 
         const board = game.getBoard();
         for (let r = 0; r < config.rows; r++) {
             for (let c = 0; c < config.columns; c++) {
-                if (board[r][c] === 'player1') {
-                    player1Positions.push([r, c]);
-                } else if (board[r][c] === 'player2') {
-                    player2Positions.push([r, c]);
+                if (board[r][c] === 'player_1') {
+                    player_1Positions.push([r, c]);
+                } else if (board[r][c] === 'player_2') {
+                    player_2Positions.push([r, c]);
                 }
             }
         }
@@ -62,8 +63,8 @@ export function validateGame(moves: number[], config: GameConfig): ValidationRes
 
         // Record step
         result[`step_${stepNumber}`] = {
-            player1: player1Positions,
-            player2: player2Positions,
+            player_1: player_1Positions,
+            player_2: player_2Positions,
             board_state: boardState,
             ...(winner && { winner })
         };
@@ -74,7 +75,7 @@ export function validateGame(moves: number[], config: GameConfig): ValidationRes
         }
 
         // Switch player
-        currentPlayer = currentPlayer === 'player1' ? 'player2' : 'player1';
+        currentPlayer = currentPlayer === 'player_1' ? 'player_2' : 'player_1';
         stepNumber++;
     }
 

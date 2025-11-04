@@ -5,12 +5,12 @@ export const testConfig: GameConfig = {
     columns: 7,
     connectLength: 4,
     players: {
-        player1: {
+        player_1: {
             name: "Player 1",
             color: "#f44336",
             emoji: "🔴",
         },
-        player2: {
+        player_2: {
             name: "Player 2",
             color: "#2196f3",
             emoji: "🔵",

@@ -8,8 +8,8 @@ export interface ValidationResult {
 }
 
 export interface GameStep {
-    player1: Position[];
-    player2: Position[];
+    player_1: Position[];
+    player_2: Position[];
     board_state: GameState;
     winner?: {
         who: Player;
