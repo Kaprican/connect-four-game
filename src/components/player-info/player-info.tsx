@@ -16,7 +16,7 @@ export function PlayerInfo() {
         switch (gameState) {
             case 'waiting':
                 return 'Press Start to begin!';
-            case 'playing':
+            case 'pending':
                 return `${currentPlayerConfig.name}'s turn${' ' + currentPlayerConfig?.emoji}`;
             case 'win':
                 return `${currentPlayerConfig.name} wins!`;

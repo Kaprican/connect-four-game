@@ -18,7 +18,7 @@ export const useGame = (config: GameConfig) => {
     }, [config.sound]);
 
     const makeMove = useCallback((column: number) => {
-        if (gameState !== 'playing') return;
+        if (gameState !== 'pending') return;
 
         const row = game.makeMove(column, currentPlayer);
         if (row === null) {
@@ -67,7 +67,7 @@ export const useGame = (config: GameConfig) => {
         game.reset();
         setBoard(game.getBoard());
         setCurrentPlayer('player1');
-        setGameState('playing');
+        setGameState('pending');
         setWinningPositions([]);
     }, [game]);
 

@@ -6,6 +6,7 @@ import './App.scss';
 import type { PlayerConfig } from './interfaces/player.interface.ts';
 import { SoundToggle } from './components/sound-toggle/sound-toggle.tsx';
 import type { GameConfig } from './interfaces/config.interface.ts';
+import Confetti from 'react-confetti';
 
 const App: React.FC = () => {
     const [config, setConfig] = useState(defaultConfig);
@@ -32,7 +33,7 @@ const App: React.FC = () => {
         switch (gameState) {
             case 'waiting':
                 return 'Press Start to begin!';
-            case 'playing':
+            case 'pending':
                 return `${currentPlayerConfig.name}'s turn${' ' + currentPlayerConfig?.emoji}`;
             case 'win':
                 return `${currentPlayerConfig.name} wins!`;
@@ -43,6 +44,8 @@ const App: React.FC = () => {
 
     return (
         <div className="app">
+            { gameState === 'win' ? <Confetti/> : '' }
+
             <div className="header">
                 <h1 className="game-title">Connect Four</h1>
 

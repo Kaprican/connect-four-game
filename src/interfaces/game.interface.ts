@@ -1,7 +1,7 @@
-import type { BoardState, Position } from './board.interface.ts';
+import type { Position } from './board.interface.ts';
 import type { Player } from './player.interface.ts';
 
-export type GameState = 'waiting' | 'playing' | 'win' | 'draw';
+export type GameState = 'waiting' | 'pending' | 'win' | 'draw';
 
 export interface ValidationResult {
     [step: string]: GameStep;
@@ -10,7 +10,7 @@ export interface ValidationResult {
 export interface GameStep {
     player1: Position[];
     player2: Position[];
-    board_state: BoardState;
+    board_state: GameState;
     winner?: {
         who: Player;
         positions: Position[];
