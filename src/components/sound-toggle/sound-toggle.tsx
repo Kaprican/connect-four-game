@@ -1,31 +1,18 @@
 import React from 'react';
 import './sound-toggle.scss';
 import { SlVolumeOff, SlVolume2 } from "react-icons/sl";
+import type { SoundToggleProps } from '../../interfaces/sound.interface.ts';
 
-interface SoundToggleProps {
-    isEnabled: boolean;
-    onToggle: (enabled: boolean) => void;
-    className?: string;
-}
-
-export const SoundToggle: React.FC<SoundToggleProps> = ({
-                                                            isEnabled,
-                                                            onToggle,
-                                                            className = ''
-                                                        }) => {
-    const handleClick = () => {
-        onToggle(!isEnabled);
-    };
-
+export const SoundToggle: React.FC<SoundToggleProps> = ({ isEnabled, onToggle }: SoundToggleProps) => {
     return (
         <button
-            className={`sound-toggle ${isEnabled ? 'sound-toggle--on' : 'sound-toggle--off'} ${className}`}
-            onClick={handleClick}
+            className={`sound-toggle ${isEnabled ? 'sound-toggle--on' : 'sound-toggle--off'}`}
+            onClick={onToggle}
             aria-label={isEnabled ? 'Enable' : 'Disable'}
             title={isEnabled ? 'Enable' : 'Disable'}
         >
             <div className="sound-toggle-icon">
-                {isEnabled ? <SlVolume2 /> : <SlVolumeOff />}
+                {isEnabled ? <SlVolume2/> : <SlVolumeOff/>}
             </div>
         </button>
     );

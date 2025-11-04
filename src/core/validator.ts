@@ -1,6 +1,6 @@
 import { ConnectFourGame } from './game-logic';
 import type { GameConfig } from '../interfaces/config.interface.ts';
-import type { ValidationResult } from '../interfaces/game.interface.ts';
+import type { GameState, ValidationResult } from '../interfaces/game.interface.ts';
 import type { Player } from '../interfaces/player.interface.ts';
 
 export function validateGame(moves: number[], config: GameConfig): ValidationResult {
@@ -47,7 +47,7 @@ export function validateGame(moves: number[], config: GameConfig): ValidationRes
 
         // Check for win
         const winPositions = game.checkWin(row, column, currentPlayer);
-        let boardState: 'pending' | 'win' | 'draw' = 'pending';
+        let boardState: GameState = 'pending';
         let winner = undefined;
 
         if (winPositions) {
