@@ -1,4 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Honk&display=swap');
+@font-face {
+    font-family: "Honk";
+    src: local("Honk"),
+    url("./honk.woff2") format("woff2");
+    font-display: block;
+}
 
 .honk-font {
     font-size: 100px;
@@ -13,6 +18,8 @@
 
 .start-button {
     cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
 
     &:hover {
         filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.5));
@@ -48,4 +55,10 @@
             text-align: start;
         }
     }
+}
+
+.fonts-loaded .start-button {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
 }

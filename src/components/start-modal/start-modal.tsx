@@ -1,10 +1,17 @@
 import './start-modal.scss';
 import { Modal } from '../modal/modal.tsx';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export function StartModal({startFn}: { startFn: () => void }) {
     const [isRulesVisible, setIsRulesVisibility] = useState(false);
     const toggleRulesVisibility = () => setIsRulesVisibility((v) => !v);
+
+    useEffect(() => {
+        // Проверяем загрузку шрифта
+        document.fonts.ready.then(() => {
+            document.body.classList.add('fonts-loaded');
+        });
+    }, []);
 
     return (
         <Modal showCloseButton={false}>
@@ -38,7 +45,7 @@ export function StartModal({startFn}: { startFn: () => void }) {
                 </div>
 
                 <div>
-                    If you're ready, so, grab your lad and have a nice time together
+                    If you're ready, so, grab your mate and have a nice time together
                 </div>
                 <span onClick={startFn} className="start-button honk-font">
                     Start
