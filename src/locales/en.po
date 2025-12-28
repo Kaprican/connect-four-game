@@ -1,0 +1,86 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2023-03-23 12:19+0100\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: @lingui/cli\n"
+"Language: en\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
+
+#: src/components/start-modal/start-modal.tsx:19
+msgid "Close the rules"
+msgstr ""
+
+#: src/components/result-modal/result-modal.tsx:14
+msgid "Congrats!"
+msgstr ""
+
+#: src/App.tsx:109
+msgid "Connect Four"
+msgstr ""
+
+#: src/components/start-modal/start-modal.tsx:19
+msgid "Game rules here"
+msgstr ""
+
+#: src/components/start-modal/start-modal.tsx:14
+msgid "Hi, pal"
+msgstr ""
+
+#: src/components/start-modal/start-modal.tsx:42
+msgid "If you're ready, so, grab your lad and have a nice time together"
+msgstr ""
+
+#: src/components/start-modal/start-modal.tsx:28
+msgid "Players drop the discs into the grid, starting in the middle or at the edge to stack their colored discs"
+msgstr ""
+
+#: src/components/settings-modal/settings-modal.tsx:41
+msgid "Restart game"
+msgstr ""
+
+#: src/components/settings-modal/settings-modal.tsx:35
+msgid "Settings"
+msgstr ""
+
+#: src/components/result-modal/result-modal.tsx:14
+msgid "So..."
+msgstr ""
+
+#: src/components/settings-modal/settings-modal.tsx:44
+msgid "Sound"
+msgstr ""
+
+#: src/components/start-modal/start-modal.tsx:45
+msgid "Start"
+msgstr ""
+
+#: src/components/result-modal/result-modal.tsx:25
+msgid "Start new game"
+msgstr ""
+
+#: src/components/start-modal/start-modal.tsx:15
+msgid "This is a connect four game"
+msgstr ""
+
+#: src/components/start-modal/start-modal.tsx:33
+msgid "Use strategy to block opponents while aiming to be the first player to get 4 in a row to win."
+msgstr ""
+
+#: src/components/start-modal/start-modal.tsx:31
+msgid "When a player drops a disc, it falls to the lowest available space in that column"
+msgstr ""
+
+#: src/components/start-modal/start-modal.tsx:24
+msgid "You have 7x6 grid"
+msgstr ""
+
+#: src/components/start-modal/start-modal.tsx:25
+msgid "Your goal to get four of their discs in a row — horizontally, vertically, or diagonally"
+msgstr ""
